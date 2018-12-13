@@ -13,8 +13,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-
-
+/**
+ * Marijn Meijering <m.h.j.meijering@uva.nl>
+ * 10810765 Universiteit van Amsterdam
+ * Minor Programmeren 17/12/2018
+ */
 public class MenuItemAdapter extends ArrayAdapter<MenuItem> {
 
     private ArrayList menu;
@@ -25,24 +28,27 @@ public class MenuItemAdapter extends ArrayAdapter<MenuItem> {
     }
 
     @NonNull
-    @Override
+    @Override // Method that will be called every time a new list item (menu item) is to be displayed
     public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent) {
 
+        // If the convert view is null, inflate a new one
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.menu_row, parent, false);
         }
 
+        // Get the name, price and image belonging to the dish
         TextView Name = convertView.findViewById(R.id.name);
         TextView Price = convertView.findViewById(R.id.price);
         ImageView Image = convertView.findViewById(R.id.image);
 
+        // Get the index of the menu item that we want to display
         MenuItem menuItem = (MenuItem) menu.get(position);
 
+        // Set the price name and price of the dish
         Name.setText(menuItem.getName());
         Price.setText("€" + menuItem.getPrice());
 
-        // Turn url into an image view using Picasso
-        // Source: https://stackoverflow.com/questions/2471935/how-to-load-an-imageview-by-url-in-android
+        // Load image from the internet into an image view using Picasso
         Picasso.get().load(menuItem.getImageUrl()).resize(100, 100).into(Image);
 
         return convertView;
