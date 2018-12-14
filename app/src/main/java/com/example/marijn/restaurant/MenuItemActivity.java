@@ -38,6 +38,6 @@ public class MenuItemActivity extends AppCompatActivity {
         name.setText(intent.getStringExtra("name"));
         category.setText(intent.getStringExtra("category"));
         description.setText(intent.getStringExtra("description"));
-        price.setText("€" + intent.getStringExtra("price"));
+        price.setText("€ " + intent.getStringExtra("price"));
     }
 }

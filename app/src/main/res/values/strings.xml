@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Restaurant</string>
+    <string name="choose_a_category">Choose a category</string>
+    <string name="category_name">category name</string>
+    <string name="price">price</string>
+    <string name="dish_name">dish_name</string>
+    <string name="dish_image">dish_image</string>
 </resources>

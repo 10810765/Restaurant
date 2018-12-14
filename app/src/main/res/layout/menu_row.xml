@@ -10,8 +10,9 @@
         android:id="@+id/image"
         android:layout_width="50dp"
         android:layout_height="75dp"
-        android:layout_gravity="left"
+        android:layout_gravity="start"
         android:layout_weight="1"
+        android:contentDescription="@string/dish_image"
         android:scaleType="fitStart"
         tools:srcCompat="@tools:sample/avatars[2]" />
 
@@ -19,10 +20,11 @@
         android:id="@+id/name"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="left|center_vertical"
+        android:layout_gravity="center_vertical|start"
         android:layout_weight="1"
-        android:paddingLeft="6dp"
-        android:text="dish_name"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:text="@string/dish_name"
         android:textAlignment="textStart"
         android:textSize="18sp" />
 
@@ -31,11 +33,13 @@
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
         android:layout_weight="1"
-        android:paddingLeft="32dp"
-        android:paddingRight="6dp"
-        android:text="price"
+        android:paddingStart="32dp"
+        android:paddingEnd="6dp"
+        android:text="@string/price"
         android:textAlignment="textStart"
+        android:textSize="16sp"
         android:textStyle="bold" />
 </LinearLayout>

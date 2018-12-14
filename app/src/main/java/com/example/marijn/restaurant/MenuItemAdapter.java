@@ -46,7 +46,7 @@ public class MenuItemAdapter extends ArrayAdapter<MenuItem> {
 
         // Set the price name and price of the dish
         Name.setText(menuItem.getName());
-        Price.setText("€" + menuItem.getPrice());
+        Price.setText("€ " + menuItem.getPrice());
 
         // Load image from the internet into an image view using Picasso
         Picasso.get().load(menuItem.getImageUrl()).resize(100, 100).into(Image);
