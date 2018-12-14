@@ -36,20 +36,20 @@ public class MenuItemAdapter extends ArrayAdapter<MenuItem> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.menu_row, parent, false);
         }
 
-        // Get the name, price and image belonging to the dish
+        // Get the ID's of the name and price (TextView) and the picture (ImageView)
         TextView Name = convertView.findViewById(R.id.name);
         TextView Price = convertView.findViewById(R.id.price);
-        ImageView Image = convertView.findViewById(R.id.image);
+        ImageView picture = convertView.findViewById(R.id.image);
 
         // Get the index of the menu item that we want to display
         MenuItem menuItem = (MenuItem) menu.get(position);
 
-        // Set the price name and price of the dish
+        // Set the name and price of the dish
         Name.setText(menuItem.getName());
         Price.setText("€ " + menuItem.getPrice());
 
         // Load image from the internet into an image view using Picasso
-        Picasso.get().load(menuItem.getImageUrl()).resize(100, 100).into(Image);
+        Picasso.get().load(menuItem.getImageUrl()).resize(100, 100).into(picture);
 
         return convertView;
     }
