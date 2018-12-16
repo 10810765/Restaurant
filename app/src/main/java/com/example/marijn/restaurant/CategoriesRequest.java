@@ -38,6 +38,7 @@ public class CategoriesRequest implements Response.Listener<JSONObject>, Respons
     // Method will attempt to retrieve the categories from the API
     public void getCategories(Callback activity) {
         this.activity = activity;
+
         // Create a new request queue
         RequestQueue queue = Volley.newRequestQueue(context);
 
